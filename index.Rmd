@@ -1,0 +1,16 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Teshawna's awesome website
+
+## Local image 
+Here is an image of me: 
+![](/Users/teshawnabadu/Desktop/Data science/shawnan.jpeg)
+
+## Link to page within the site 
+[About me](about.html)
