@@ -10,7 +10,7 @@ output:
 
 ## Local image 
 Here is an image of me: 
-![](/Users/teshawnabadu/Desktop/Data science/shawnan.jpeg)
+![](/Users/teshawnabadu/Desktop/Data science/Teshawna-lab.github.io/shawnan.jpeg)
 
 ## Link to page within the site 
 [About me](about.html)
