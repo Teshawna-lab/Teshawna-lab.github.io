@@ -1,16 +1,12 @@
 ---
-title: "My awesome website"
+title: "Teshawna Badu's website"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Teshawna's awesome website
 
-## Local image 
-Here is an image of me: 
 ![](/Users/teshawnabadu/Desktop/Data science/Teshawna-lab.github.io/shawnan.jpeg)
 
-## Link to page within the site 
-[About me](about.html)
+Learn a little more [About me](about.html) 
