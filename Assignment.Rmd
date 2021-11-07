@@ -1,13 +1,42 @@
 ---
-title: "About Me"
+title: "Examples with Plotly"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
 
-![](/Users/teshawnabadu/Desktop/Data science/Teshawna-lab.github.io/shawna2.jpeg)
 
-My name is Teshawna Badu. I was born and raised in New York. I am a Ghanaian-American, who is currently studying at Columbia University Mailman School of Public Health. I am an MPH candidate in Epidemiology department with a certificate in Applied Biostatistics and Public Health Data Science. My research interests include data science, the built environment, maternal health and global health.
+#Plotting  
+We're going to look at the Instacart dataset and graph a scatterplot, line graph and bar graph.Plotly was used to produce the following graphs below as well as the ones produced in the dashboard. 
 
-In my leisure time, I enjoy watching "Bad Reality TV", trying recipes from YouTube and crocheting. I also enjoy going on long walks and reading. African literature is one of my favorite book genres, and a recent thrilling read I enjoyed was Freshwater by Akwaeke Emezi.
+```{r scatter}
+instacart %>%
+  count(aisle) %>%
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "scatter")
+```
+
+
+```{r}
+instacart %>% 
+  sample_n(10) %>%
+  group_by(product_name, order_dow) %>% 
+  summarize(mean = mean(order_hour_of_day)) %>% 
+  plot_ly(y = ~mean, x = ~product_name, type = "scatter", mode = "line")
+```
+
+
+```{r barchart}
+instacart %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
+```
+
+
+

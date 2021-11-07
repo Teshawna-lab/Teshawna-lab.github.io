@@ -1,0 +1,48 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+instacart %>%
+  count(aisle) %>%
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "scatter")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>% 
+  sample_n(10) %>%
+  group_by(product_name, order_dow) %>% 
+  summarize(mean = mean(order_hour_of_day)) %>% 
+  plot_ly(y = ~mean, x = ~product_name, type = "scatter", mode = "line")
+```
+
+### Chart C
+
+```{r}
+instacart %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
+```
+
