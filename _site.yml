@@ -13,12 +13,12 @@ navbar:
       href: Assignment.html
     - text: "Dashboard"
       href: Dashboard.html
-    - icon: fa-envelope fa-lg
-      href: mailto:<tb2910@cumc.columbia.edu> 
-    - icon: fa-linkedin fa-lg
-      href: https://www.linkedin.com/in/teshawnabadu/
-    - icon: fa-github fa-lg
-      href: http://github.com/Teshawna-lab/
+  - icon: fa-envelope fa-lg
+    href: mailto:<tb2910@cumc.columbia.edu> 
+  - icon: fa-linkedin 
+    href: https://https://www.linkedin.com/in/teshawnabadu/
+  - icon: fa-github fa-lg
+    href: http://github.com/Teshawna-lab/
 output:
   html_document:
     theme: flatly
