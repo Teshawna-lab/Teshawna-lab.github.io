@@ -12,9 +12,10 @@ library(plotly)
 ```
 
 
-#Plotting  
-We're going to look at the Instacart dataset and graph a scatterplot, line graph and bar graph.Plotly was used to produce the following graphs below as well as the ones produced in the dashboard. 
+## Examples with Plotly
+We're going to look at the Instacart dataset and graph a scatterplot, line graph and bar graph. Plotly was used to produce the graphs below as well as the ones produced in the dashboard. 
 
+## Scatterplot
 ```{r scatter}
 instacart %>%
   count(aisle) %>%
@@ -22,6 +23,7 @@ instacart %>%
 ```
 
 
+## Line graph
 ```{r}
 instacart %>% 
   sample_n(10) %>%
@@ -30,7 +32,7 @@ instacart %>%
   plot_ly(y = ~mean, x = ~product_name, type = "scatter", mode = "line")
 ```
 
-
+## Bar chart
 ```{r barchart}
 instacart %>% 
   count(department) %>% 
